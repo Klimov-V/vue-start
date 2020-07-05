@@ -1,5 +1,5 @@
-var app = new Vue({
-    el        : '#app',
+var textarea = new Vue({
+    el        : '#textarea',
     data      : {
       message : 'Hello, World!',
       userValue: '',
@@ -16,4 +16,16 @@ var app = new Vue({
             this.isEmpty = this.userValue ? false : true;
         },
     }
-  })
+});
+
+let button = new Vue({
+    el: '#button',
+    data: {
+
+    },
+    methods: {
+        action: function() {
+            
+        }
+    }
+});

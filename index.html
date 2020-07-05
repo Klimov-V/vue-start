@@ -11,7 +11,7 @@
 
 <body>
 
-    <div id="app" class="container">
+    <div id="textarea" class="container">
         <p style="white-space: pre-line;">Введённый текст: <br>{{shownValue}}</p>
         <textarea v-model="userValue" 
                     v-on:input="check" 
@@ -19,6 +19,13 @@
                     placeholder="Введите текст"></textarea>
         <button v-on:click="send">Send</button>
     </div>
+
+    <div id="button" class="container">
+        <button @click="action">Click me</button>
+    </div>
+
+
+
     
     <script src="js/vue.js"></script>
     <script src="js/scripts.js"></script>
