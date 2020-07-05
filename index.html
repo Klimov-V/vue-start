@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="app" class="container">
+        <p style="white-space: pre-line;">Введённый текст: <br>{{shownValue}}</p>
+        <textarea v-model="userValue" 
+                    v-on:input="check" 
+                    v-bind:class="{activeTextAreaStyle: !isEmpty}" 
+                    placeholder="Введите текст"></textarea>
+        <button v-on:click="send">Send</button>
+    </div>
+    
+    <script src="js/vue.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
