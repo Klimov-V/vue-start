@@ -11,7 +11,7 @@
 
 <body>
 
-    <div id="textarea" class="container">
+    <div id="textarea" class="container" style="outline: 1px solid red;">
         <p style="white-space: pre-line;">Введённый текст: <br>{{shownValue}}</p>
         <textarea v-model="userValue" 
                     v-on:input="check" 
@@ -20,10 +20,15 @@
         <button v-on:click="send">Send</button>
     </div>
 
-    <div id="button" class="container">
+    <div id="button" class="container" style="outline: 1px solid green;">
         <button @click="action">Click me</button>
+        <div v-show="showBlock" style="display: flex; flex-direction: column;">
+            <button @mouseup="checkBtn" @contextmenu.prevent>Кнопка мыши</button>
+            <p v-show="showFstInpt">Нажата: {{btn}}</p>
+            <button @mouseup="showTime">Время</button>
+            <p v-show="showScndInpt">Сейчас {{hours}}:{{minutes}}:{{seconds}}</p>
+        </div>
     </div>
-
 
 
     
